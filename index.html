@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+        <img id="boxtexture" 
+        src="Assets/check.jpeg">
+        <img id="skytexture"
+        src="Assets/Park.jpg">
+        <img id="standtexture"
+        src="Assets/Marble .jpeg">
+
+        <a-asset-item id="moneybone" src="Assets/Bone.glb">
+        </a-asset-item>
+
+        <a-asset-item
+        id="stand"
+        src="Assets/Stand.glb">
+        </a-asset-item>
+
+      </a-assets>
+
+      <a-entity 
+      raycaster="" 
+      cursor="" 
+      light="angle: 0; color: #fff9db; type: point; shadowCameraFar: 500.7; shadowCameraFov: 90.19; shadowCameraBottom: -1.6; intensity:0.33" 
+      Position="0.0 3.406 .392">
+      </a-entity>
+      
+      <a-entity 
+      raycaster="" 
+      cursor="" 
+      light="type: point; angle: 0; color: #997366; shadowCameraBottom: -1.6; shadowCameraFar: 500.7; shadowCameraFov: 90.19"
+      Position="0.0 1.979 -6.322">
+      </a-entity>
+
+      <a-entity 
+      light="color: #fff9db; intensity: 0.33; type: ambient">
+      </a-entity>
+
+   
+
+      <a-gltf-model 
+      src="#moneybone"
+      position="-0.01718 1.68724 -2.67017" 
+      scale="0.8 0.8 0.8">
+      </a-gltf-model>
+
+      <a-gltf-model 
+      src="#stand"
+      position="0 -0.09311 -2.67222" 
+      scale="0.3 0.3 0.3"
+      material="#black">
+      </a-gltf-model>
+
+
+      <a-sky 
+      src="#skytexture">
+      </a-sky>
+
+    </a-scene>
+  </body>
+</html>
